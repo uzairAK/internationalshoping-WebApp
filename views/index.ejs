@@ -1,0 +1,73 @@
+<% include partials/header %>
+
+
+    <section role="banner" class="promo-banner">
+        <div class="page-frame promo-banner-inner container">
+            <div class="promo-cop">
+                <h1 class="hero-title font-weight-bold text-dar"  role="heading">Shop USA Stores &amp; Ship Internationally for Less</h1>
+                <p class="action-button bt"><a class="btn-alternativ btn btn-teal  white-text" href="#how-it-works">How it works</a>
+                    <button class="btn-pla js-how-it-works btn btn-blue-grey"><span>Learn More</span></button>
+                </p>
+            </div>
+        </div>
+        
+    </section>
+    <section role="row">
+        <div class="edge-heade " style="height: 100v">
+            <!-- Main Container -->
+            <div class="container-flui free-bird">
+              <div class="row">
+                <div class="col-md-10 col-lg-12 mx-auto float-none white z-depth-3 py-0 px-2">
+
+                  <!--Naked Form-->
+<!--
+                  <div class="card-body">
+
+                  </div>
+-->
+<!--                    <h2 class="h2-responsive header text-center"><strong>Brands</strong></h2>-->
+                  <!--Naked Form-->
+
+                </div>
+              </div>
+                <div class=" row d-flex navbar z-depth-0 flex-row flex-wrap m-auto justify-content-center" style="">
+                    <% brands.forEach(function(brand){ %>
+                        
+                    <div class="col col-xs-2 col-sm-2 col-md-1 my-2 float-non z-depth- ">
+                        <div class="card"  style="width:">
+                            <div class="card-body p-1">
+                                <img src="<%=brand.image%>" class="card-img-top" style="max-height:; width: aut; object-fit: contain; object-position: 50% 50%;" alt="<%=brand.name%>">
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+            <!-- /.Main Container -->
+        </div>
+    </section>
+    <section role="group" class="my-5 my-md-3 mb- container-fluid" id="how-it-works">
+        <div class="row mx- p-sm-5 d-flex flex-wrap">
+            <div class="col-xs-12 col-sm-6 col-md-6 my-auto">
+                <div class="m-md-3 p-md-5 d-fle  ">
+                    <h6 class="h2-responsive text-justify">How Its Works</h6>
+                    <h6 class="h6-responsive text-justify">Experience the ease in your shopping with InternationalShopin and discover yourself the great products. See the video on right to learn more.fdsf sdfd adsfj sdf sdf fsd fds fsdf sd fsdf dsf dsfj Experience the ease in your shopping with InternationalShopin and discover yourself the great products. See the video on right to learn more.fdsf sdfd adsfj sdf sdf fsd fds fsdf sd fsdf dsf dsfj </h6>
+                    <h6 class="h6-responsive text-justify">Experience the ease in your shopping with InternationalShopin and discover yourself the great products. See the video on right to learn more.fdsf sdfd adsfj sdf sdf fsd fds fsdf sd fsdf dsf dsfj Experience the ease in your shopping with InternationalShopin and discover yourself the great products. See the video on right to learn more.fdsf sdfd adsfj sdf sdf fsd fds fsdf sd fsdf dsf dsfj </h6>
+                    <h6 class="h6-responsive text-justify">Experience the ease in your shopping with InternationalShopin and discover yourself the great products. See the video on right to learn more.fdsf sdfd adsfj sdf sdf fsd fds fsdf sd fsdf dsf dsfj </h6>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 px-5 my-auto" style="">
+                <div class="embed-responsive embed-responsive-16by9 z-depth-3">
+<!--                  <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/jsXqDlAXfwo" allowfullscreen></iframe>-->
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jsXqDlAXfwo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container d-inline-flex " style="justify-content: center;">
+                <img src="https://img.usgobuy.com/images/en/www/helpcenter/Howitworks.jpg" class="img-responsive rounded" style="object-fit: cover; width: 90vw; border: 1px solid;">
+            </div>
+        </div>
+    </section>
+
+<% include partials/footer %>

@@ -1,0 +1,49 @@
+<% include partials/header %>
+
+
+<div class="container-fluid my-1 py-3 ">
+<div class="row">
+    <div class="col-2 card">
+            <div class="card-heade text-center">
+                <div class="h6">Categories</div>
+            </div>  
+        <ul class="list-group">
+            <li class="btn btn-sm btn-teal ">Sports</li>
+            <li class="btn btn-sm btn-teal ">Sports</li>
+            <li class="btn btn-sm btn-teal ">Sports</li>
+            <li class="btn btn-sm btn-teal ">Sports</li>
+        </ul>
+    </div>
+    <div class="col">
+        <div class="card z-depth-2" style="min-height: 80vh">
+            <div class="card-header text-cente">
+                <div class="h4">Sports / <%= category %></div>
+            </div>
+            <div class="card-body">
+<!--                <div class="justify-content-center red container">dfdfds</div>-->
+                <form action="/buyforme" method="post">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <p>Product name:</p> <input class="form-control" type="text" placeholder="" name="info[name]"><br>
+                            <p>Quantity:</p> <input class="form-control" type="number" placeholder="" name="info[quantity]" value="1"><br>
+                            <p>Price (in US Dollars):</p> <input class="form-control" type="number" placeholder="" name="info[price]" value="0"><br>
+
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <p>Website Link:</p> <input class="form-control" type="text" placeholder="" name="info[link]"><br>
+                            <p>Additional info:</p> 
+<!--                            <input class="form-control" type="text" placeholder="" name="info[info]"><br>-->
+                            <textarea rows="4" wrap="hard" class="form-control" maxlength="550" name="info[info]"></textarea>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <input class="btn btn-default" type="submit" value="Send Order" st>
+                    </div>
+                </form>
+                <div class="text-muted">Note: <br>1) The order may take some time for approval. <br>2) You may get a call from us for further process or queries. Make sure the number you entered in your profile is accurate. Otherwise the order may be cancelled</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<% include partials/footer %>

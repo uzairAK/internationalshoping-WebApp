@@ -1,0 +1,54 @@
+<% include partials/header %>
+
+<div class="container-fluid my-1 py-3 z-depth-3">
+<div class="row">
+    <div class="col-xs-12 col-md-3">
+        <ul class="list-group px-2 text-white">
+            <a class="link-item" href="/profile"><li class="list-group-item list-group-item-action text-dark">My Profile</li></a>
+            <a href="/history"><li class="list-group-item list-group-item-action text-dark">Orders History</li></a>
+<!--
+            <a href=""><li class="list-group-item list-group-item-action text-dark">My Profile</li></a>
+            <a href=""><li class="list-group-item list-group-item-action text-dark">My Profile</li></a>
+            <a href=""><li class="list-group-item list-group-item-action text-dark">My Profile</li></a>
+-->
+        </ul>
+    </div>
+    <div class="col-xs-12 col-md-9">
+        <div class="card z-depth-2" style="min-height: 80vh">
+            <div class="card-header h4">My Orders History</div>
+            <div class="card-body">
+                <table class="table table-responsiv text-nowra table-fixe w-aut table-sm table-hover" id="dtBasicExample" cellspacing="0" width="100%">
+                  <thead  class="grey lighten-2">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th class="th-sm" scope="col">Order Date</th>
+                      <th class="th-lg" scope="col">Item</th>
+                      <th class="th-lg" scope="col">Item description</th>
+                      <th class="th-sm" scope="col">Link</th>
+                      <th class="th-sm" scope="col">Price</th>
+                      <th class="th-sm" scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <% orders.forEach(function(order, index){%>
+                        <tr>
+                          <th scope="row"><%= index +1 %></th>
+                          <td><%= order.created.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' }); %></td>
+                          <td><%= order.name %></td>
+                          <td><%= order.info %></td>
+                          <td><%= order.link %></td>
+                          <td><%= order.price %> * <%= order.quantity %> = $<%= order.price * order.quantity %></td>
+                          <td><%= order.status %></td>
+                          <td><a href="/product_detail/<%= order._id %>"><i class="fas fa-info-circle"></i></a></td>
+                        </tr>
+                      <%})%>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<% include partials/footer %>

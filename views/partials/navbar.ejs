@@ -1,0 +1,152 @@
+        <div class="aler alert-dark white-text" role="alert">
+        <div class="justify-content-end navbar m-auto stylish-color">
+            <h6 class="h6 my-auto mx-5">
+                <i class="fas fa-phone mr-2"></i>Contact: 03454369424
+            </h6>
+            <div class="mr-0">
+                <!--Facebook-->
+                <a class="fb-ic mr-3" role="button" href="https://www.facebook.com/InternationalShopingPk/"><i class="fab fa-lg fa-facebook-f"></i></a>
+                <!--Twitter-->
+                <a class="tw-ic mr-3" role="button"><i class="fab fa-lg fa-twitter"></i></a>
+                <!--Google +-->
+                <a class="gplus-ic mr-3" role="button"><i class="fab fa-lg fa-google-plus-g"></i></a>
+                <!--Linkedin-->
+                <a class="li-ic mr-3" role="button"><i class="fab fa-lg fa-linkedin-in"></i></a>
+                <!--Instagram-->
+                <a class="ins-ic mr-3" role="button"><i class="fab fa-lg fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm navbar-light d-color p-0">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand " href="/" style="font-size: 1.5rem">
+          <img src="/brands/logo.jpg" height="40px" width="auto">
+        </a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse " id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto mr-sm-0 mr-md-5 btn-group flex-wrap flex-row align-items-stretch">
+          <li class="nav-item">
+            <a class="nav-link bt" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bt" href="/#how-it-works">How it Works</a>
+          </li>
+          <li class="nav-item dropbtn">
+            <a class="nav-link bt" href="/buyforme">Buy For Me</a>
+          </li>
+<!--
+          <li class="nav-item">
+            <a class="nav-link btn-grey white-text rounded mx-1 ml-md-5 ml-sm-0" href="/signup">Sign Up</a>
+          </li>
+-->
+<!--
+            <li class="nav-item">
+            <a class="nav-link btn-grey white-text rounded mx- bordered border-circle" href="/logout">Log out</a>
+          </li>
+-->
+            
+
+          <!-- Dropdown -->
+            <!-- Basic dropdown -->
+            <li class="nav-item" style="  position: relative;display: block;">
+          <div class="dropdow nav-item  p-2">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <i class="fas fa-user-circle" style="font-size: 2em"></i>
+              <span class="caret p-" style="font-size:1.4em"><%= currentUser.firstName %></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+              <li><a class="dropdown-item" href="/history">Orders History</a></li>
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            </ul>
+          </div>
+            </li>
+<!-- Basic dropdown -->
+
+        </ul>
+        <!-- Links -->
+      </div>
+      <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+    <div class="">
+        <div class="navbar-nav">
+        <ul class="navbar navbar-nav btn-grou stylish-color flex-wrap d-inline-flex flex-row align-items-cente" style="justify-content: center">
+          <li class="nav-item">
+            <a class="nav-link btn p-1 m-1 mx-2" href="/products/all">Sports
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  btn p-1 m-1 mx-2" href="#">Men Perfumes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn p-1 m-1 mx-2" href="#">Women perfumes</a>
+          </li>
+            
+
+          <!-- Dropdown -->
+<!--
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+-->
+
+        </ul>
+        </div>
+    </div>
+
+<script>
+//$(function() {
+//  //add BT DD show event
+//  $(".dropdown").on("show.bs.dropdown", function() {
+//    var $btnDropDown = $(this).find(".dropdown-toggle");
+//    var $listHolder = $(this).find(".dropdown-menu");
+//    //reset position property for DD container
+//    $(this).css("position", "static");
+////    $listHolder.css({
+////      "top": ($btnDropDown.offset().top + $btnDropDown.outerHeight(true)) + "px",
+////      "left": $btnDropDown.offset().left + "px"
+////    });
+//    $listHolder.data("open", true);
+//  });
+//  //add BT DD hide event
+//  $(".dropdown").on("hidden.bs.dropdown", function() {
+//    var $listHolder = $(this).find(".dropdown-menu");
+//    $listHolder.data("open", false);
+//  });
+//  //add on scroll for table holder
+//  $(".ak-holder").scroll(function() {
+//    var $ddHolder = $(this).find(".dropdown")
+//    var $btnDropDown = $(this).find(".dropdown-toggle");
+//    var $listHolder = $(this).find(".dropdown-menu");
+//    if ($listHolder.data("open")) {
+//      $listHolder.css({
+//        "top": ($btnDropDown.offset().top + $btnDropDown.outerHeight(true)) + "px",
+//        "left": $btnDropDown.offset().left + "px"
+//      });
+//      $ddHolder.toggleClass("open", ($btnDropDown.offset().left > $(this).offset().left))
+//    }
+//  })
+//});
+</script>

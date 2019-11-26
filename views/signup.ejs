@@ -1,0 +1,71 @@
+<% include partials/header %>
+
+<div class="" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <form class="md-form" action="/signup" method="post">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+      </div>
+          <% if(hasErrors) {%>
+                <div class="alert alert-danger text-center">
+                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                   <% _.forEach(messages, function(error){ %>
+                       <%= error %><br>
+                   <% }) %>
+                    
+                </div>
+            <% } %>
+      <div class="modal-body mx-3">
+        <div class="md-formmb-">First Name: 
+<!--          <i class="fa fa-user prefix grey-text"></i>-->
+          <input type="text" id="regForm-fname" class="form-control validate" name="firstName">
+<!--          <label data-error="wrong" data-success="right" for="regForm-fname">Your First name</label>-->
+        </div>        
+          <div class="md-for mb-0">Last Name:
+<!--          <i class="fa fa-user prefix grey-text"></i>-->
+          <input type="text" id="regForm-lname" class="form-control validate" name="lastName">
+<!--          <label data-error="wrong" data-success="right" for="regForm-lname">Your Last name</label>-->
+        </div>
+          <div class="md-for mb-0">Username:
+<!--          <i class="fa fa-user prefix grey-text"></i>-->
+          <input type="text" id="regForm-username" class="form-control validate" name="username">
+<!--          <label data-error="wrong" data-success="right" for="regForm-username">Your Username</label>-->
+        </div>
+        <div class="md-for mb-0">Email:
+          <input type="email" id="regForm-email" class="form-control validate" name="email">
+        </div>
+
+        <div class="md-for mb-0">Password:
+<!--          <i class="fa fa-lock prefix grey-text"></i>-->
+          <input type="password" id="regForm-pass" class="form-control validate" name="password">
+<!--          <label data-error="wrong" data-success="right" for="regForm-pass">Your password</label>-->
+        </div>
+<!--          <input hidden type="boolean" name="isApproved" placeholder="" value="false" />-->
+<!--            <input hidden type="text" name="type" placeholder="" value="Researcher" />-->
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange">Sign up</button>
+      </div>
+        <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+          with:</p>
+
+        <div class="row my-3 d-flex justify-content-center">
+<!--          Facebook-->
+          <a href="/auth/facebook">
+              <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook text-center"></i></button>
+            </a>
+          <!--Twitter-->
+<!--          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>-->
+          <!--Google +-->
+            <a href="/auth/google">
+          <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus"></i></button>
+            </a>
+        </div>
+        </form>
+      </div>
+  </div>
+</div>
+<% include partials/footer %>
